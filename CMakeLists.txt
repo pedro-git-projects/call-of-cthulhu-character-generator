@@ -4,6 +4,7 @@ project(CthulluCharacterGenerator VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 ########################## Adding Google Test ###########################
 
@@ -41,3 +42,9 @@ add_library(CthulluCharacterGeneratorLib STATIC ${PROJECT_SOURCES})
 add_executable(CthulluCharacterGenerator ${PROJECT_SOURCES})
 
 target_link_libraries(CthulluCharacterGenerator CthulluCharacterGeneratorLib)
+
+
+########################## Google Test libs bin and linking ###########################
+
+add_executable(testRunner tests/test.cc)
+target_link_libraries(testRunner CthulluCharacterGeneratorLib gtest_main gmock_main)
