@@ -7,7 +7,7 @@ class Dice {
 
 	protected:
 		Dice() = default;
-		virtual ~Dice() = 0;
+		virtual ~Dice() = default;
 };
 
 #endif

@@ -6,8 +6,9 @@
 class DiceFactory {
 	public:
 		virtual Dice* create() const = 0;
+		unsigned int roll() const;
 	protected:
-		virtual ~DiceFactory() = 0;
+		~DiceFactory() = default;
 };
 
 #endif
