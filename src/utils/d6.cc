@@ -1,5 +1,5 @@
-#include <utils/d6.h>
-#include <rng.h>
+#include "d6.h"
+#include "rng.h"
 
 D6::D6() : numberOfSides{6} {} 
 

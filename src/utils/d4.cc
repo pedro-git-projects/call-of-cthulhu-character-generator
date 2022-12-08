@@ -1,5 +1,5 @@
-#include <utils/d4.h>
-#include <rng.h>
+#include "d4.h"
+#include "rng.h"
 
 D4::D4() : numberOfSides{4} {} 
 
