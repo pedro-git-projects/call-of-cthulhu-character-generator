@@ -1,5 +1,5 @@
-#include <utils/d100.h>
-#include <rng.h>
+#include "d100.h"
+#include "rng.h"
 
 D100::D100() : numberOfSides{100} {} 
 
