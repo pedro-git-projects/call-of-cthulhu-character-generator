@@ -46,5 +46,10 @@ target_link_libraries(CthulluCharacterGenerator CthulluCharacterGeneratorLib)
 
 ########################## Google Test libs bin and linking ###########################
 
-add_executable(testRunner tests/test.cc)
+set(TEST_SOURCES
+	tests/test.cc
+	tests/utils/dice_roller_test.cc
+)
+
+add_executable(testRunner ${TEST_SOURCES})
 target_link_libraries(testRunner CthulluCharacterGeneratorLib gtest_main gmock_main)
