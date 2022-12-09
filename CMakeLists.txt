@@ -21,8 +21,13 @@ endif()
 
 #########################################################################
 
-include_directories(headers/utils)
-link_directories(headers/utils)
+set(INCLUDE_SOURCES
+	headers/utils	
+	headers/characters
+)
+
+include_directories(${INCLUDE_SOURCES})
+link_directories(${INCLUDE_SOURCES})
 
 set(PROJECT_SOURCES
 	src/main.cc
@@ -35,6 +40,7 @@ set(PROJECT_SOURCES
 	src/utils/d4_factory.cc headers/utils/d4_factory.h
 	src/utils/dice_roller.cc headers/utils/dice_roller.h
 	src/utils/rng.cc headers/utils/rng.h
+	src/characters/investigator.cc headers/characters/investigator.h
 )
 
 add_library(CthulluCharacterGeneratorLib STATIC ${PROJECT_SOURCES})
@@ -49,6 +55,7 @@ target_link_libraries(CthulluCharacterGenerator CthulluCharacterGeneratorLib)
 set(TEST_SOURCES
 	tests/test.cc
 	tests/utils/dice_roller_test.cc
+	tests/characters/investigator_test.cc
 )
 
 add_executable(testRunner ${TEST_SOURCES})
