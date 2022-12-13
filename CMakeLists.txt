@@ -41,6 +41,9 @@ set(PROJECT_SOURCES
 	src/utils/dice_roller.cc headers/utils/dice_roller.h
 	src/utils/rng.cc headers/utils/rng.h
 	src/characters/investigator.cc headers/characters/investigator.h
+	src/characters/character.cc headers/characters/character.h
+	src/system/combat.cc headers/system/combat.h
+
 )
 
 add_library(CthulluCharacterGeneratorLib STATIC ${PROJECT_SOURCES})
