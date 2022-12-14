@@ -7,8 +7,6 @@ Character::Character(std::string name, unsigned int age, std::string residence, 
 	occupation_{ occupation }
 {}
 
-
-
 std::string Character::name() const {
 	return name_;
 }

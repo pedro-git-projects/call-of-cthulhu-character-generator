@@ -31,7 +31,7 @@ class Character {
 		int mv() const;
 		virtual void calculate_attributes() = 0;
 
-	private:
+	protected:
 		std::string name_;
 		unsigned int age_;
 		std::string residence_;

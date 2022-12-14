@@ -1,6 +1,8 @@
 #ifndef CTHULLU_HEADERS_CHARACTERS_INVESTIGATOR_H_
 #define CTHULLU_HEADERS_CHARACTERS_INVESTIGATOR_H_
 
+#include "d100_factory.h"
+#include "d10_factory.h"
 #include "d6_factory.h"
 #include "dice_roller.h"
 #include <character.h>
@@ -14,6 +16,8 @@ class Investigator : public Character {
 	protected:
 		DiceRoller roller;
 		D6Factory d6_factory;
+		D10Factory d10_factory;
+		D100Factory d100_factory;
 		int roll_str() const;
 		int roll_con() const;
 		int roll_siz() const;
@@ -23,6 +27,7 @@ class Investigator : public Character {
 		int roll_pow() const;
 		int roll_edu() const;
 		int roll_luck() const;
+		int improvement_check() const;
 };
 
 #endif

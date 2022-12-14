@@ -32,15 +32,21 @@ link_directories(${INCLUDE_SOURCES})
 
 set(PROJECT_SOURCES
 	src/main.cc
+
 	src/utils/d100.cc headers/utils/d100.h
+	src/utils/d10.cc headers/utils/d10.h
 	src/utils/d6.cc headers/utils/d6.h
 	src/utils/d4.cc headers/utils/d4.h
+
 	src/utils/dice_factory.cc  headers/utils/dice_factory.h 
 	src/utils/d100_factory.cc  headers/utils/d100_factory.h 
+	src/utils/d10_factory.cc  headers/utils/d10_factory.h 
 	src/utils/d6_factory.cc headers/utils/d6_factory.h
 	src/utils/d4_factory.cc headers/utils/d4_factory.h
+
 	src/utils/dice_roller.cc headers/utils/dice_roller.h
 	src/utils/rng.cc headers/utils/rng.h
+
 	src/characters/character.cc headers/characters/character.h
 	src/characters/investigator.cc headers/characters/investigator.h
 
