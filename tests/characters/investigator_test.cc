@@ -1,9 +1,9 @@
-#include <investigator.h>
+#include <investigator_teen.h>
 #include <gtest/gtest.h>
 #include <string.h>
 
-TEST(InvestigatorTest, AreFieldsPopulated) {
-	Investigator i {"Pedro", 21, "World", "City", "Bogrammer"};
+TEST(InvestigatorTest, FactoryFieldsPopulated) {
+	InvestigatorTeen i {"Pedro", 21, "World", "City", "Brogrammer"};
 
 	std::string name{ i.name() }; 
 	unsigned int age{ i.age() };

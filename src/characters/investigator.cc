@@ -6,4 +6,3 @@ Investigator::Investigator(std::string name, unsigned int age, std::string resid
 	Character{name, age, residence, birthplace, occupation}
 {}
 
-void Investigator::calculate_attributes() {}

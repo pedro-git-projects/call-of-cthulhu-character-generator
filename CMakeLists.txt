@@ -24,6 +24,7 @@ endif()
 set(INCLUDE_SOURCES
 	headers/utils	
 	headers/characters
+	headers/system
 )
 
 include_directories(${INCLUDE_SOURCES})
@@ -40,10 +41,28 @@ set(PROJECT_SOURCES
 	src/utils/d4_factory.cc headers/utils/d4_factory.h
 	src/utils/dice_roller.cc headers/utils/dice_roller.h
 	src/utils/rng.cc headers/utils/rng.h
-	src/characters/investigator.cc headers/characters/investigator.h
 	src/characters/character.cc headers/characters/character.h
-	src/system/combat.cc headers/system/combat.h
+	src/characters/investigator.cc headers/characters/investigator.h
 
+	src/characters/investigator_teen.cc headers/characters/investigator_teen.h
+	src/characters/investigator_adult.cc headers/characters/investigator_adult.h
+	src/characters/investigator_forties.cc headers/characters/investigator_forties.h
+	src/characters/investigator_fifties.cc headers/characters/investigator_fifties.h
+	src/characters/investigator_seventies.cc headers/characters/investigator_seventies.h
+	src/characters/investigator_sixties.cc headers/characters/investigator_sixties.h
+	src/characters/investigator_eighties.cc headers/characters/investigator_eighties.h
+
+	src/characters/investigator_teen_factory.cc headers/characters/investigator_teen_factory.h
+	src/characters/investigator_adult_factory.cc headers/characters/investigator_adult_factory.h
+	src/characters/investigator_forties_factory.cc headers/characters/investigator_forties_factory.h
+	src/characters/investigator_fifties_factory.cc headers/characters/investigator_fifties_factory.h
+	src/characters/investigator_sixties_factory.cc headers/characters/investigator_sixties_factory.h
+	src/characters/investigator_seventies_factory.cc headers/characters/investigator_seventies_factory.h
+	src/characters/investigator_eighties_factory.cc headers/characters/investigator_eighties_factory.h
+	src/characters/concrete_investigator_factory.cc headers/characters/concrete_investigator_factory.h
+
+	headers/characters/investigator_factory.h
+	src/system/combat.cc headers/system/combat.h
 )
 
 add_library(CthulluCharacterGeneratorLib STATIC ${PROJECT_SOURCES})
@@ -59,6 +78,7 @@ set(TEST_SOURCES
 	tests/test.cc
 	tests/utils/dice_roller_test.cc
 	tests/characters/investigator_test.cc
+	tests/characters/factory_test.cc
 )
 
 add_executable(testRunner ${TEST_SOURCES})

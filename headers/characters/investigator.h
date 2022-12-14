@@ -8,7 +8,7 @@ class Investigator : public Character {
 	public:
 		Investigator() = default;
 		Investigator(std::string name, unsigned int age, std::string residence, std::string birthplace, std::string occupation);
-		void calculate_attributes() override;
+		virtual void calculate_attributes() = 0;
 };
 
 #endif
